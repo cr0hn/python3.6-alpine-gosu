@@ -1,7 +1,4 @@
 FROM python:3-alpine
-COPY --from=python-base /root/.cache /root/.cache
-COPY --from=python-base requirements.txt .
-COPY --from=python-base requirements-private.txt .
 ENV GOSU_VERSION 1.10
 RUN set -ex; \
 	apk add --no-cache --virtual .gosu-deps \
