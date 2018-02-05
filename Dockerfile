@@ -1,6 +1,7 @@
 FROM python:3-alpine
 ENV GOSU_VERSION 1.10
 RUN set -ex; \
+    apk update && apk upgrade && \
 	apk add --no-cache --virtual .gosu-deps \
 		dpkg \
 		gnupg \
